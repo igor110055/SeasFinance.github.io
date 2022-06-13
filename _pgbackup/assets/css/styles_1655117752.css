@@ -15,7 +15,10 @@
     --title-color: hsl(var(--hue), 4%, 15%);
     --text-color: hsl(var(--hue), 4%, 35%);
     --text-color-light: hsl(var(--hue), 4%, 65%);
-    --body-color: hsl(var(--hue), 0%, 100%);
+
+    /* --body-color: hsl(var(--hue), 0%, 100%); */
+    /* Original */
+    --body-color: #d6fff7;
     --container-color: #FFF;
     --scroll-bar-color: hsl(var(--hue), 4%, 85%);
     --scroll-thumb-color: hsl(var(--hue), 4%, 75%);
@@ -105,13 +108,21 @@ body.dark-theme {
     --first-color-light: hsl(var(--hue), var(--sat), 75%);
     --title-color: hsl(var(--hue), 4%, 95%);
     --text-color: hsl(var(--hue), 4%, 80%);
-    --body-color: hsl(var(--hue), 8%, 13%);
+
+    /* --body-color: hsl(var(--hue), 8%, 13%); */
+    /* Original */
+    --body-color: #0c1031;
     --container-color: hsl(var(--hue), 8%, 16%);
     --scroll-bar-color: hsl(var(--hue), 4%, 32%);
     --scroll-thumb-color: hsl(var(--hue), 4%, 24%);
 }
 
 /* ========== Button Dark/Light ========== */
+.bx .bx-toggle-left .change-theme .bx-toggle-right {
+    background-color: red;
+    border-radius: 93px;
+}
+
 .change-theme {
     position: absolute;
     right: 1.5rem;
@@ -119,6 +130,8 @@ body.dark-theme {
     color: var(--title-color);
     font-size: 1.8rem;
     cursor: pointer;
+    background-color: blue;
+    border-radius: 93px;
 }
 
 .dark-theme .footer {
@@ -273,11 +286,34 @@ body.dark-theme {
     text-shadow: 2px 0 0 #2e2e36, -2px 0 0 #2e2e36, 0 2px 0 #2e2e36, 0 -2px 0 #2e2e36, 1px 1px #2e2e36, -1px -1px 0 #2e2e36, 1px -1px 0 #2e2e36, -1px 1px 0 #2e2e36;
 }
 
+.poocoin {
+    color: #825c3c;
+    text-shadow: 2px 0 0 #49270a, -2px 0 0 #49270a, 0 2px 0 #49270a, 0 -2px 0 #49270a, 1px 1px #49270a, -1px -1px 0 #49270a, 1px -1px 0 #49270a, -1px 1px 0 #49270a;
+}
+
+.bnb__logo {
+    height: 15px;
+}
+
+.imgnft {
+    margin: auto;
+}
+
 /* =============== BUTTONS =============== */
 .button {
     display: inline-block;
     background-color: var(--first-color);
     color: #1A1A1A;
+    padding: .75rem 1.5rem;
+    border-radius: 3rem;
+    font-weight: var(--font-semi-bold);
+    transition: .3s;
+}
+
+.telegrambutton {
+    display: inline-block;
+    background-color: #23a0dd;
+    color: #ffffff;
     padding: .75rem 1.5rem;
     border-radius: 3rem;
     font-weight: var(--font-semi-bold);
@@ -309,11 +345,17 @@ body.dark-theme {
     padding: .75rem 1rem;
 }
 
+.button-flex-roadmap {
+    text-align: center;
+    column-gap: .25rem;
+    padding: .75rem 1rem;
+}
+
 .button__icon {
     font-size: 1.5rem;
 }
 
-/* =============== ABOUT =============== */
+/* =============== TOKENOMICS =============== */
 .about__container {
     gap: 2.5rem;
 }
@@ -322,7 +364,7 @@ body.dark-theme {
     text-align: center;
 }
 
-/* =============== SECURITY =============== */
+/* =============== BUY =============== */
 .security__container {
     gap: 2.5rem;
 }
@@ -334,12 +376,13 @@ body.dark-theme {
 /* =============== SERVICES =============== */
 .services__container {
     padding-top: 1rem;
+    color: #f3f3f2;
 }
 
 .services__data {
     display: grid;
     row-gap: 1rem;
-    background-color: var(--container-color);
+    background-color: #2e3ec0;
     box-shadow: 0px 2px 6px hsla(var(--hue), 100%, 15%, 0.15);
     padding: 2rem 1.5rem;
     border-radius: 1rem;
@@ -350,6 +393,11 @@ body.dark-theme {
     width: 135px;
     justify-self: center;
     margin-bottom: var(--mb-0-5);
+}
+
+.button-link,
+.services__subtitle {
+    color: #f3f3f2;
 }
 
 /* =============== APP =============== */
@@ -363,6 +411,8 @@ body.dark-theme {
 
 .app__description {
     margin-bottom: var(--mb-1-5);
+    display: inherit;
+    font-size: 1.2em;
 }
 
 .app__buttons {
@@ -399,11 +449,15 @@ body.dark-theme {
 /* =============== FOOTER =============== */
 .footer {
     background-color: var(--first-color-lighten);
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
+    padding-top: 0rem;
 }
 
 .footer__container {
-    row-gap: 2rem;
+}
+
+.footer__container {
+    row-gap: 0rem;
 }
 
 .footer__logo,
@@ -443,7 +497,7 @@ body.dark-theme {
 }
 
 .footer__copy {
-    margin-top: 6rem;
+    margin-top: 0rem;
     text-align: center;
     font-size: var(--smaller-font-size);
     color: var(--text-color);
