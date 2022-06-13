@@ -122,9 +122,17 @@ body.dark-theme {
     position: absolute;
     right: 1.5rem;
     top: 2.2rem;
-    color: var(--title-color);
+    color: #efe;
     font-size: 1.8rem;
     cursor: pointer;
+    background-color: #0c1031;
+    border-radius: 50px;
+}
+
+.bx-toggle-right {
+    background-color: #d6fff7;
+    border-radius: 50px;
+    color: #010;
 }
 
 .dark-theme .footer {
@@ -259,6 +267,12 @@ body.dark-theme {
 }
 
 /* =============== HOME =============== */
+.chart {
+    max-width: 2000px;
+    height: 400px;
+    margin-bottom: 30px;
+}
+
 .home__container {
     row-gap: 3rem;
 }
@@ -279,8 +293,17 @@ body.dark-theme {
     text-shadow: 2px 0 0 #2e2e36, -2px 0 0 #2e2e36, 0 2px 0 #2e2e36, 0 -2px 0 #2e2e36, 1px 1px #2e2e36, -1px -1px 0 #2e2e36, 1px -1px 0 #2e2e36, -1px 1px 0 #2e2e36;
 }
 
+.poocoin {
+    color: #825c3c;
+    text-shadow: 2px 0 0 #49270a, -2px 0 0 #49270a, 0 2px 0 #49270a, 0 -2px 0 #49270a, 1px 1px #49270a, -1px -1px 0 #49270a, 1px -1px 0 #49270a, -1px 1px 0 #49270a;
+}
+
 .bnb__logo {
     height: 15px;
+}
+
+.imgnft {
+    margin: auto;
 }
 
 /* =============== BUTTONS =============== */
@@ -292,6 +315,11 @@ body.dark-theme {
     border-radius: 3rem;
     font-weight: var(--font-semi-bold);
     transition: .3s;
+}
+
+.button__header {
+    background: -webkit-linear-gradient(top, #ec6266 30%, #751bc0 70%);
+    color: var(--title-color);
 }
 
 .telegrambutton {
@@ -329,11 +357,24 @@ body.dark-theme {
     padding: .75rem 1rem;
 }
 
+.button-flex-roadmap {
+    text-align: center;
+    column-gap: .25rem;
+    padding: .75rem 1rem;
+}
+
+#phase1 {
+    text-align: center;
+    column-gap: .25rem;
+    padding: .75rem 1rem;
+    background-color: #6dfd35;
+}
+
 .button__icon {
     font-size: 1.5rem;
 }
 
-/* =============== ABOUT =============== */
+/* =============== TOKENOMICS =============== */
 .about__container {
     gap: 2.5rem;
 }
@@ -342,7 +383,7 @@ body.dark-theme {
     text-align: center;
 }
 
-/* =============== SECURITY =============== */
+/* =============== BUY =============== */
 .security__container {
     gap: 2.5rem;
 }
@@ -354,12 +395,13 @@ body.dark-theme {
 /* =============== SERVICES =============== */
 .services__container {
     padding-top: 1rem;
+    color: #f3f3f2;
 }
 
 .services__data {
     display: grid;
     row-gap: 1rem;
-    background-color: var(--container-color);
+    background-color: #2e3ec0;
     box-shadow: 0px 2px 6px hsla(var(--hue), 100%, 15%, 0.15);
     padding: 2rem 1.5rem;
     border-radius: 1rem;
@@ -370,6 +412,11 @@ body.dark-theme {
     width: 135px;
     justify-self: center;
     margin-bottom: var(--mb-0-5);
+}
+
+.button-link,
+.services__subtitle {
+    color: #f3f3f2;
 }
 
 /* =============== APP =============== */
@@ -383,6 +430,8 @@ body.dark-theme {
 
 .app__description {
     margin-bottom: var(--mb-1-5);
+    display: inherit;
+    font-size: 1.2em;
 }
 
 .app__buttons {
@@ -419,11 +468,15 @@ body.dark-theme {
 /* =============== FOOTER =============== */
 .footer {
     background-color: var(--first-color-lighten);
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
+    padding-top: 0rem;
 }
 
 .footer__container {
-    row-gap: 2rem;
+}
+
+.footer__container {
+    row-gap: 0rem;
 }
 
 .footer__logo,
@@ -463,7 +516,7 @@ body.dark-theme {
 }
 
 .footer__copy {
-    margin-top: 6rem;
+    margin-top: 0rem;
     text-align: center;
     font-size: var(--smaller-font-size);
     color: var(--text-color);

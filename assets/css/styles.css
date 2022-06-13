@@ -267,6 +267,12 @@ body.dark-theme {
 }
 
 /* =============== HOME =============== */
+.chart {
+    max-width: 2000px;
+    height: 400px;
+    margin-bottom: 30px;
+}
+
 .home__container {
     row-gap: 3rem;
 }
@@ -309,6 +315,11 @@ body.dark-theme {
     border-radius: 3rem;
     font-weight: var(--font-semi-bold);
     transition: .3s;
+}
+
+.button__header {
+    background: -webkit-linear-gradient(top, #ec6266 30%, #751bc0 70%);
+    color: var(--title-color);
 }
 
 .telegrambutton {

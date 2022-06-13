@@ -16,10 +16,9 @@
           function drawChart() {
                     var data = google.visualization.arrayToDataTable([
           ['Tax', 'Amount (in %)'],
-          ['Reflection (BUSD)',     5],
-		  ['Liquidity',     3],
-		  ['Marketing',     2],
-          ['Burning',     2],
+          ['Reflection (SEAS)',     5],
+		  ['BuyBack & Burning',     3],
+		  ['Marketing',     4]
         ]);
 
         var options = {
@@ -30,17 +29,17 @@
 			fontSize: 20,
 			bold: true	
           },
-		  pieHole: 0.55,
+		  pieHole: 0.35,
           tooltip: {
           text: 'value'},
           legend: {
 			  position: 'top',
 			  alignment:'center',
-			  maxLines: 2,
+			  maxLines: 3,
 			  textStyle: {
 				  color: '#1ef0ad',
 				  bold: true,
-				  fontSize: 15}
+				  fontSize: 11}
 				  },
 		  slices: {
             0: { color: '#1e6df0' },
@@ -63,24 +62,31 @@
                 <div class="nav__menu" id="nav-menu"> 
                     <ul class="nav__list"> 
                         <li class="nav__item"> 
-                            <a href="#home" class="nav__link active-link">Home</a> 
+                            <a href="#home" class="nav__link active-link"></a> 
                         </li>                         
                         <li class="nav__item"> 
                             <a href="#tokenomics" class="nav__link">Tokenomics</a> 
                         </li>                         
                         <li class="nav__item"> 
-                            <a href="#services" class="nav__link">NFT</a> 
+                            <a href="#buy" class="nav__link">DEX</a> 
                         </li>                         
                         <li class="nav__item"> 
-                            <a href="#contact" class="nav__link">Roadmap</a> 
+                            <a href="#nft" class="nav__link">NFT</a> 
                         </li>                         
+                        <li class="nav__item"> 
+                            <a href="#roadmap" class="nav__link">Roadmap</a> 
+                        </li>
+                        <li class="nav__item"> 
+                            <a href="https://seasfinance.gitbook.io/seas-finance-whitepaper/" class="nav__link">Whitepaper</a> 
+                        </li>
                         <i class='bx bx-toggle-left change-theme' id="theme-button"></i> 
                     </ul>                     
                 </div>                 
                 <div class="nav__toggle" id="nav-toggle"> 
                     <i class='bx bx-grid-alt'></i> 
-                </div>                 
-                <a href="https://pancakeswap.finance/swap?outputCurrency=0xB27ADAfFB9fEa1801459a1a81B17218288c097cc" class="button button__header">Buy Now!</a> 
+                </div>
+                <a href="https://pancakeswap.finance/swap?outputCurrency=0xfea15175402aa65d7b93ba6faea3a5b25fa373d1" class="button button__header">PRESALE!</a> 
+                <!--<a href="https://pancakeswap.finance/swap?outputCurrency=0xfea15175402aa65d7b93ba6faea3a5b25fa373d1" class="button button__header">Buy Now!</a>-->
             </nav>             
         </header>         
         <main class="main"> 
@@ -98,7 +104,7 @@
             <!--=============== TOKENOMICS ===============-->             
             <section class="about section container" id="tokenomics"> 
                 <div class="about__container grid">
-                    <div id="donutchart" style="width: 420px; height: 320px;"></div>
+                    <div id="donutchart" style="height: auto;width: auto; overflow:hidden;"></div>
                     <div class="about__data"> 
                         <h2 class="section__title-center">OUR TOKENOMICS ARE SIMPLE!</h2> 
                         <p class="about__description">We strongly believe holders should be rewarded the most, as they&apos;re the part of our community!</p>
@@ -109,44 +115,57 @@
                 </div>                 
             </section>             
             <!--=============== DAAPS ===============-->             
-            <section class="security section container"> 
-                <div class="security__container grid"> 
-                    <div class="security__data"> 
+            <section class="security section container" id="buy"> 
+                <div class="chart">
+                    <chart-embed address="0xFeA15175402AA65D7b93Ba6FAEA3a5b25FA373d1
+" chain="bsc
+" charttype="candles
+" theme="dark
+" defaultinterval="1h
+" showchartbutton="true
+"></chart-embed>
+                </div>
+                <script async type="module">
+                import { register } from "https://public.bog-general-api.com/static/chart/main.js";
+                register("chart-embed");
+              </script>
+                <div class="security__container grid">
+                    <div class="security__data">
                         <h2 class="section__title-center">BUY DIRECTLY FROM  <inline class="poocoin">POOCOIN</inline>!</h2> 
                         <p class="security__description"><inline class="nav__logo">$SEAS</inline> is launched on Pancakeswap which allows you to buy directly from DEX like Poocoin!</p>
                     </div>                     
-                    <iframe src="https://poocoin.app/embed-swap?outputCurrency=0xB27ADAfFB9fEa1801459a1a81B17218288c097cc" width="90%" height="450px"></iframe>
+                    <iframe src="https://poocoin.app/embed-swap?outputCurrency=0xfea15175402aa65d7b93ba6faea3a5b25fa373d1" width="90%" height="450px"></iframe>
                 </div>
             </section>             
             <!--=============== SERVICES ===============-->             
-            <section class="services section container" id="services"> 
+            <section class="services section container" id="nft"> 
                 <h2 class="section__title">EXPLORE OUR NFT! <i>(Work in progress)</i></h2> 
                 <div class="services__container grid"> 
                     <div class="services__data"> 
                         <h3 class="services__subtitle">Seas #1</h3> 
                         <img class="imgnft" src="./assets/img/NFTPlaceHolder.png"/>
                         <div> 
-                            <a href="#" class="button button-link">Buy on Opensea!</a> 
+                            <a href="https://opensea.io/SeasFinance" class="button button-link">Buy on Opensea!</a> 
                         </div>                         
                     </div>                     
                     <div class="services__data"> 
                         <h3 class="services__subtitle">Seas #2</h3> 
                         <img class="imgnft" src="./assets/img/NFTPlaceHolder.png"/>
                         <div> 
-                            <a href="#" class="button button-link">Buy on Opensea!</a> 
+                            <a href="https://opensea.io/SeasFinance" class="button button-link">Buy on Opensea!</a> 
                         </div>                         
                     </div>                     
                     <div class="services__data"> 
                         <h3 class="services__subtitle">Seas #3</h3> 
                         <img class="imgnft" src="./assets/img/NFTPlaceHolder.png"/>
                         <div> 
-                            <a href="#" class="button button-link">Buy on Opensea!</a> 
+                            <a href="https://opensea.io/SeasFinance" class="button button-link">Buy on Opensea!</a> 
                         </div>                         
                     </div>                     
                 </div>                 
             </section>             
             <!--=============== APP ===============-->             
-            <section class="app section container"> 
+            <section class="app section container" id="roadmap"> 
                 <div class="app__container grid"> 
                     <div class="app__data"> 
                         <h2 class="section__title-center">OUR ROADMAP!</h2> 
@@ -157,10 +176,10 @@
                     </div>                     
                     <div class="app__buttons"> 
 </div>                     
-                    <a href="#phase1" class="button button-flex-roadmap" id="phase1"> ⭐️⭐️⭐️ Phase 1: ⭐️⭐️⭐️ </a> 
-                    <p class="app__description"> <span>- Telegram & Socials Created.</span> <span>- Website 1.0.</span> <span>- Whitepaper 1.0.</span> <span>- Private Sell.</span> </p> 
-                    <a href="#phase2" class="button button-flex-roadmap" id="phase2"> 🐠🐠🐠 Phase 2: 🐠🐠🐠 </a> 
-                    <p class="app__description"> <span>- Contract creation.</span> <span>- Presale on Pinksale.</span> <span>- Launch on Pancakeswap.</span> <span>- 1st BuyBack & Burn.</span> </p> 
+                    <a href="#phase1" class="button button-flex-roadmap" id="phase1"> ⭐️⭐️⭐️ Phase 1: DONE ⭐️⭐️⭐️ </a> 
+                    <p class="app__description"> <span>- Telegram & Socials Created. ✅ </span> <span>- Website 1.0. ✅</span> <span>- Whitepaper 1.0. ✅</span> <span>- Private Sell. ✅</span> </p> 
+                    <a href="#phase2" class="button button-flex-roadmap" id="phase2"> 🐠🐠🐠 Phase 2: IN PROGRESS 🐠🐠🐠 </a> 
+                    <p class="app__description"> <span>- Contract creation. ✅</span> <span>- Presale on Doken Launchpad.</span> <span>- Launch on Pancakeswap.</span> <span>- 1st BuyBack & Burn.</span> </p> 
                     <a href="#phase3" class="button button-flex-roadmap" id="phase3"> 🐬🐬🐬 Phase 3: 🐬🐬🐬 </a> 
                     <p class="app__description"> <span>- 500 members on Telegram.</span> <span>- 50K Volume daily.</span> <span>- Staking & Farming.</span> <span>- NFT release.</span> </p> 
                     <a href="#phase4" class="button button-flex-roadmap" id="phase4"> 🌊🌊🌊 Phase 4: 🌊🌊🌊 </a> 
