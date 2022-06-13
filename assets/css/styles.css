@@ -352,6 +352,13 @@ body.dark-theme {
     padding: .75rem 1rem;
 }
 
+#phase1 {
+    text-align: center;
+    column-gap: .25rem;
+    padding: .75rem 1rem;
+    background-color: #6dfd35;
+}
+
 .button__icon {
     font-size: 1.5rem;
 }
