@@ -317,6 +317,19 @@ body.dark-theme {
     transition: .3s;
 }
 
+.airdrop {
+    max-width: 135px;
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    background: -webkit-linear-gradient(top, #f89b09 30%, #f80941 70%);
+    color: #ffffff;
+    padding: .75rem 1.5rem;
+    border-radius: 3rem;
+    font-weight: var(--font-semi-bold);
+    transition: .3s;
+}
+
 .button__header {
     background: -webkit-linear-gradient(top, #ec6266 30%, #751bc0 70%);
     color: var(--title-color);
@@ -584,6 +597,13 @@ body.dark-theme {
 
     .app__buttons {
         grid-template-columns: max-content;
+    }
+
+    .airdrop {
+        max-width: 100px;
+        top: 60px;
+        right: 10px;
+        font-size: 0.6em;
     }
 }
 

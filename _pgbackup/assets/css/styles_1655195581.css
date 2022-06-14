@@ -122,9 +122,17 @@ body.dark-theme {
     position: absolute;
     right: 1.5rem;
     top: 2.2rem;
-    color: var(--title-color);
+    color: #efe;
     font-size: 1.8rem;
     cursor: pointer;
+    background-color: #0c1031;
+    border-radius: 50px;
+}
+
+.bx-toggle-right {
+    background-color: #d6fff7;
+    border-radius: 50px;
+    color: #010;
 }
 
 .dark-theme .footer {
@@ -259,6 +267,12 @@ body.dark-theme {
 }
 
 /* =============== HOME =============== */
+.chart {
+    max-width: 2000px;
+    height: 400px;
+    margin-bottom: 30px;
+}
+
 .home__container {
     row-gap: 3rem;
 }
@@ -303,6 +317,24 @@ body.dark-theme {
     transition: .3s;
 }
 
+#airdrop {
+    max-width: 135px;
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    background: -webkit-linear-gradient(top, #f89b09 30%, #f80941 70%);
+    color: #ffffff;
+    padding: .75rem 1.5rem;
+    border-radius: 3rem;
+    font-weight: var(--font-semi-bold);
+    transition: .3s;
+}
+
+.button__header {
+    background: -webkit-linear-gradient(top, #ec6266 30%, #751bc0 70%);
+    color: var(--title-color);
+}
+
 .telegrambutton {
     display: inline-block;
     background-color: #23a0dd;
@@ -342,6 +374,13 @@ body.dark-theme {
     text-align: center;
     column-gap: .25rem;
     padding: .75rem 1rem;
+}
+
+#phase1 {
+    text-align: center;
+    column-gap: .25rem;
+    padding: .75rem 1rem;
+    background-color: #6dfd35;
 }
 
 .button__icon {
@@ -559,6 +598,13 @@ body.dark-theme {
     .app__buttons {
         grid-template-columns: max-content;
     }
+
+    #airdrop {
+        max-width: 100px;
+        top: 60px;
+        right: 10px;
+        font-size: 0.6em;
+    }
 }
 
 /* For medium devices */
@@ -603,6 +649,15 @@ body.dark-theme {
     .about__img,
     .app__img {
         order: -1;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px) {
+    #airdrop {
+        max-width: 100px;
+        top: 10px;
+        right: 10px;
+        font-size: 0.6em;
     }
 }
 
