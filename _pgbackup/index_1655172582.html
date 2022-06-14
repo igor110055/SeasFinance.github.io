@@ -16,10 +16,9 @@
           function drawChart() {
                     var data = google.visualization.arrayToDataTable([
           ['Tax', 'Amount (in %)'],
-          ['Reflection (BUSD)',     5],
-		  ['Liquidity',     3],
-		  ['Marketing',     2],
-          ['Burning',     2],
+          ['Reflection (SEAS)',     5],
+		  ['BuyBack&Burn',     3],
+		  ['Marketing',     4]
         ]);
 
         var options = {
@@ -27,16 +26,16 @@
 		  pieSliceText: 'value',
           pieSliceTextStyle: {
             color: 'white',	
-			fontSize: 20,
+			fontSize: 18,
 			bold: true	
           },
-		  pieHole: 0.35,
+		  pieHole: 0.40,
           tooltip: {
           text: 'value'},
           legend: {
 			  position: 'top',
 			  alignment:'center',
-			  maxLines: 3,
+			  maxLines: 5,
 			  textStyle: {
 				  color: '#1ef0ad',
 				  bold: true,
@@ -63,24 +62,31 @@
                 <div class="nav__menu" id="nav-menu"> 
                     <ul class="nav__list"> 
                         <li class="nav__item"> 
-                            <a href="#home" class="nav__link active-link">Home</a> 
+                            <a href="#home" class="nav__link active-link"></a> 
                         </li>                         
                         <li class="nav__item"> 
                             <a href="#tokenomics" class="nav__link">Tokenomics</a> 
                         </li>                         
                         <li class="nav__item"> 
-                            <a href="#services" class="nav__link">NFT</a> 
+                            <a href="#buy" class="nav__link">DEX</a> 
                         </li>                         
                         <li class="nav__item"> 
-                            <a href="#contact" class="nav__link">Roadmap</a> 
+                            <a href="#nft" class="nav__link">NFT</a> 
                         </li>                         
+                        <li class="nav__item"> 
+                            <a href="#roadmap" class="nav__link">Roadmap</a> 
+                        </li>
+                        <li class="nav__item"> 
+                            <a href="https://seasfinance.gitbook.io/seas-finance-whitepaper/" class="nav__link">Whitepaper</a> 
+                        </li>
                         <i class='bx bx-toggle-left change-theme' id="theme-button"></i> 
                     </ul>                     
                 </div>                 
                 <div class="nav__toggle" id="nav-toggle"> 
                     <i class='bx bx-grid-alt'></i> 
-                </div>                 
-                <a href="https://pancakeswap.finance/swap?outputCurrency=0xB27ADAfFB9fEa1801459a1a81B17218288c097cc" class="button button__header">Buy Now!</a> 
+                </div>
+                <a href="https://app.doken.exchange/dokenpad/bsc/0x3E643f5a92355cADaf3fa1aB618d7fd7dcB5341C" class="button button__header">PRESALE!</a> 
+                <!--<a href="https://pancakeswap.finance/swap?outputCurrency=0xfea15175402aa65d7b93ba6faea3a5b25fa373d1" class="button button__header">Buy Now!</a>-->
             </nav>             
         </header>         
         <main class="main"> 
@@ -90,7 +96,7 @@
                     <div class="home__data"> 
                         <h1 class="home__title">Ride the seas,&nbsp;<br>Surf the Profits!</h1> 
                         <p class="home__description">Seas Finance is here to deliver promises, Riding the waves on <inline class="bsc">#BSC </inline><img class="bnb__logo" src="./assets/img/binance-logo.png"> !</p> 
-                        <a href="https://t.me/SeasFinanceMainChat" class="telegrambutton">Join us on Telegram!</a>
+                        <a href="https://t.me/SeasFinance" class="telegrambutton">Join us on Telegram!</a>
                     </div>
                     <img src="./assets/img/Treasure.png">
                 </div>
@@ -103,23 +109,36 @@
                         <h2 class="section__title-center">OUR TOKENOMICS ARE SIMPLE!</h2> 
                         <p class="about__description">We strongly believe holders should be rewarded the most, as they&apos;re the part of our community!</p>
                         <p class="about__description">Buy once, Hold in your wallet &amp; get your rewards!</p>
-                        <p class="about__description"><b>TOTAL BUY &amp; SELL TAXES</b> <b><u>12%</u></b>: <i>5% + 3% + 2% + 2%</i></p>
+                        <p class="about__description"><b>TOTAL BUY &amp; SELL TAXES</b> <b><u>12%</u></b>: <i>5% + 7% + 3%</i></p>
                         <p class="about__description"></p> 
                     </div>                     
                 </div>                 
             </section>             
             <!--=============== DAAPS ===============-->             
-            <section class="security section container"> 
-                <div class="security__container grid"> 
-                    <div class="security__data"> 
+            <section class="security section container" id="buy"> 
+                <div class="chart">
+                    <chart-embed address="0xFeA15175402AA65D7b93Ba6FAEA3a5b25FA373d1
+" chain="bsc
+" charttype="candles
+" theme="dark
+" defaultinterval="1h
+" showchartbutton="true
+"></chart-embed>
+                </div>
+                <script async type="module">
+                import { register } from "https://public.bog-general-api.com/static/chart/main.js";
+                register("chart-embed");
+              </script>
+                <div class="security__container grid">
+                    <div class="security__data">
                         <h2 class="section__title-center">BUY DIRECTLY FROM  <inline class="poocoin">POOCOIN</inline>!</h2> 
                         <p class="security__description"><inline class="nav__logo">$SEAS</inline> is launched on Pancakeswap which allows you to buy directly from DEX like Poocoin!</p>
                     </div>                     
-                    <iframe src="https://poocoin.app/embed-swap?outputCurrency=0xB27ADAfFB9fEa1801459a1a81B17218288c097cc" width="90%" height="450px"></iframe>
+                    <iframe src="https://poocoin.app/embed-swap?outputCurrency=0xfea15175402aa65d7b93ba6faea3a5b25fa373d1" width="90%" height="450px"></iframe>
                 </div>
             </section>             
             <!--=============== SERVICES ===============-->             
-            <section class="services section container" id="services"> 
+            <section class="services section container" id="nft"> 
                 <h2 class="section__title">EXPLORE OUR NFT! <i>(Work in progress)</i></h2> 
                 <div class="services__container grid"> 
                     <div class="services__data"> 
@@ -146,7 +165,7 @@
                 </div>                 
             </section>             
             <!--=============== APP ===============-->             
-            <section class="app section container"> 
+            <section class="app section container" id="roadmap"> 
                 <div class="app__container grid"> 
                     <div class="app__data"> 
                         <h2 class="section__title-center">OUR ROADMAP!</h2> 
@@ -157,10 +176,10 @@
                     </div>                     
                     <div class="app__buttons"> 
 </div>                     
-                    <a href="#phase1" class="button button-flex-roadmap" id="phase1"> ⭐️⭐️⭐️ Phase 1: ⭐️⭐️⭐️ </a> 
-                    <p class="app__description"> <span>- Telegram & Socials Created.</span> <span>- Website 1.0.</span> <span>- Whitepaper 1.0.</span> <span>- Private Sell.</span> </p> 
-                    <a href="#phase2" class="button button-flex-roadmap" id="phase2"> 🐠🐠🐠 Phase 2: 🐠🐠🐠 </a> 
-                    <p class="app__description"> <span>- Contract creation.</span> <span>- Presale on Pinksale.</span> <span>- Launch on Pancakeswap.</span> <span>- 1st BuyBack & Burn.</span> </p> 
+                    <a href="#phase1" class="button button-flex-roadmap" id="phase1"> ⭐️⭐️⭐️ Phase 1: DONE ⭐️⭐️⭐️ </a> 
+                    <p class="app__description"> <span>- Telegram & Socials Created. ✅ </span> <span>- Website 1.0. ✅</span> <span>- Whitepaper 1.0. ✅</span> <span>- Private Sell. ✅</span> </p> 
+                    <a href="#phase2" class="button button-flex-roadmap" id="phase2"> 🐠🐠🐠 Phase 2: IN PROGRESS 🐠🐠🐠 </a> 
+                    <p class="app__description"> <span>- Contract creation. ✅</span> <span>- Presale on Doken Launchpad.</span> <span>- Launch on Pancakeswap.</span> <span>- 1st BuyBack & Burn.</span> </p> 
                     <a href="#phase3" class="button button-flex-roadmap" id="phase3"> 🐬🐬🐬 Phase 3: 🐬🐬🐬 </a> 
                     <p class="app__description"> <span>- 500 members on Telegram.</span> <span>- 50K Volume daily.</span> <span>- Staking & Farming.</span> <span>- NFT release.</span> </p> 
                     <a href="#phase4" class="button button-flex-roadmap" id="phase4"> 🌊🌊🌊 Phase 4: 🌊🌊🌊 </a> 
